@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this web is about my car.</h1> 
+
+    <p id="about"></p>
+
+    <script>
+     class car{
+
+        constructor(brand){
+            this.carname = brand;
+        }
+    }
+        class Model extends car {
+            constructor(brand, mod) {
+                super(brand);
+                this.model = mod;
+            }
+        
+        
+        present(){
+            return "I have a " + this.carname;
+        }
+        
+        show(){
+            return this.present() + ", It's a " + this.model;
+        }
+    }
+
+        let  name = new Model("Lamborghini", "Huracan");
+
+        document.getElementById("about").innerHTML = name.show();
+    </script>
+</body>
+</html>
